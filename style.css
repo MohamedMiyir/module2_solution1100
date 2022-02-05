@@ -1,0 +1,102 @@
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e8e8e8;
+}
+
+#AA_container {
+	width: 90%;
+	height: 200vh;
+	margin: 0 auto;
+	
+}
+
+#menu-title {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#inside_menu {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+	grid-gap: 20px;
+	
+}
+
+.inside_menu_box {
+	display: grid;
+
+	background-color: white;
+}
+
+.menu-icon {
+	background-color: orange;
+	padding: 10px;
+	border: 2px solid black;
+	justify-self: right;
+
+}
+
+.box {
+	padding: 10px 20px;
+}
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	#inside_menu {
+		grid-template-areas:
+		'one_grid two_grid'
+		'three_grid three_grid';
+	}
+
+	.one {
+		grid-area: one_grid;
+	}
+
+	.two {
+		grid-area: two_grid;
+	}
+
+	.three {
+		grid-area: three_grid;
+	}
+
+}
+@media (max-width: 991px) {
+
+	#inside_menu {
+		grid-template-areas:
+		'one_grid two_grid'
+		'three_grid three_grid';
+		width: 100%;
+		position: left;
+	
+	}
+
+	.one {
+		grid-area: one_grid;
+		width: 420px;
+
+	}
+
+	.two {
+		grid-area: three_grid;
+		width: 100%;
+	}
+
+	.three {
+		grid-area: four_grid;
+		width: 420px;
+	}
+
+}
+
